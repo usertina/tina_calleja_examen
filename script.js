@@ -75,3 +75,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // Llamar a la función cada segundo para actualizar la fecha en tiempo real
     setInterval(actualizarFechaActual, 1000);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Comprueba si estamos en la página de "Sillas" mediante la URL o el título de la página
+    if (window.location.href.includes("index_silla.html") || document.title.includes("Sillas")) {
+      document.body.style.backgroundColor = "lightblue"; // Cambia este color según tu preferencia
+    }
+    else if (window.location.href.includes("index_mesa.html") || document.title.includes("Mesas")) {
+        document.body.style.backgroundColor = "burlywood"; // Cambia este color según tu preferencia
+      }
+      else if (window.location.href.includes("index_armario.html") || document.title.includes("Armarios")) {
+        document.body.style.backgroundColor = "chocolate"; // Cambia este color según tu preferencia
+      }
+      else if (window.location.href.includes("index_contacto.html") || document.title.includes("Contacto")) {
+        document.body.style.backgroundColor = "darkcyan"; // Cambia este color según tu preferencia
+      }
+    else {
+        document.body.style.backgroundColor = "chartreuse";
+    }
+
+
+
+
+    
+});
