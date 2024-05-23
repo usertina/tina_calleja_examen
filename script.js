@@ -22,11 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const pasword = document.getElementById('pasword').value;
       const acepto = document.getElementById('acepto').checked;
 
-      // Verificar si el checkbox está marcado
-      if (!acepto) {
-          alert('Debes aceptar la política de privacidad');
-          return;
-      }
+      
 
       // Crear el objeto con los datos del formulario
       const formData = {
@@ -57,3 +53,25 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
  
+document.addEventListener("DOMContentLoaded", function() {
+    // Función para obtener la fecha actual en el formato deseado (por ejemplo, "20 de mayo de 2024")
+    function obtenerFechaActual() {
+        const fechaActual = new Date();
+        const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return fechaActual.toLocaleDateString('es-ES', opciones);
+    }
+
+    // Función para actualizar dinámicamente el contenido del elemento de fecha
+    function actualizarFechaActual() {
+        const fechaElemento = document.getElementById('fecha-actual');
+        if (fechaElemento) {
+            fechaElemento.textContent = obtenerFechaActual();
+        }
+    }
+
+    // Llamar a la función inicialmente para mostrar la fecha actual
+    actualizarFechaActual();
+
+    // Llamar a la función cada segundo para actualizar la fecha en tiempo real
+    setInterval(actualizarFechaActual, 1000);
+});
