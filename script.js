@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
       };
 
       // Enviar los datos a JSON Server usando fetch
-      fetch('http://localhost:3001/contactos', {
+      fetch('http://localhost:3000/contactos', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
